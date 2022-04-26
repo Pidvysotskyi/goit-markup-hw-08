@@ -1,8 +1,7 @@
 .filter-list {
   @extend %list;
-  @extend %flex-list;
-  justify-content: center;
-  margin-bottom: 50px;
+  // justify-content: center;
+  // margin-bottom: 50px;
 }
 .filter-list__button {
   cursor: pointer;
@@ -14,8 +13,8 @@
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
-  padding: 6px 22px;
-  margin-right: 8px;
+  // padding: 6px 22px;
+  // margin-right: 8px;
   box-shadow: none;
   transition-property: color, background-color, box-shadow;
   transition-duration: $animation-time;
