@@ -1,0 +1,25 @@
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-right: 93px;
+  padding: 25px 0;
+  color: $active-text-color;
+  &__end {
+    color: $secondary-text-color;
+  }
+  &__end--white {
+    color: $third-text-color;
+  }
+}
+.footer__logo {
+  margin-right: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.logo__end--white {
+  color: $third-text-color;
+}

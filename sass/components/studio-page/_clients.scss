@@ -1,0 +1,37 @@
+.clients-list {
+  @extend %list;
+  display: flex;
+}
+.clients-list__item {
+  flex-basis: calc((100%-150px) / 6);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.clients-list__link {
+  display: flex;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $media-icon-color;
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: $animation-time;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    border-color: $active-text-color;
+  }
+}
+
+.clients-list__icon {
+  fill: $media-icon-color;
+  transition-property: fill;
+  transition-duration: $animation-time;
+  transition-timing-function: $timing-function;
+  .clients-list__link:hover &,
+  .clients-list__link:focus & {
+    fill: $active-text-color;
+  }
+}
