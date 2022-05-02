@@ -19,7 +19,7 @@
   }
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
-    padding-top: 120px;
+    padding-top: 94px;
     padding-bottom: 0px;
   }
 }
@@ -71,6 +71,10 @@
   text-transform: uppercase;
   color: $secondary-text-color;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .feature-list__description {
   line-height: 1.71;
