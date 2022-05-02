@@ -2,35 +2,12 @@
   border-bottom: 1px solid $secondary-border-color;
   min-width: 320px;
 }
-.header-conteiner {
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 480px;
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
-}
 .navigation-panel {
   display: none;
 }
 .navigation-list {
   @extend %list;
   height: auto;
-}
-.navigation-list__item {
-  // position: relative;
-  // height: 100%;
-
-  &:not(:last-child) {
-    // margin-right: 50px;
-  }
 }
 .navigation-list__link {
   // display: inline-block;
