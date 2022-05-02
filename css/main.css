@@ -87,6 +87,28 @@ img {
   min-width: 320px;
 }
 
+.header-conteiner {
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 480px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-conteiner {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-conteiner {
+    max-width: 1200px;
+  }
+}
+
 .navigation-panel {
   display: none;
 }
@@ -486,13 +508,97 @@ img {
   background-color: #188ce8;
 }
 
-.features-conteiner {
+.features {
   min-width: 320px;
 }
 
+.features-conteiner {
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 480px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-conteiner {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-conteiner {
+    max-width: 1200px;
+    padding-top: 120px;
+    padding-bottom: 0px;
+  }
+}
+
+.feature-list {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.feature-list__card {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .feature-list__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list__card {
+    width: calc((100% - 60px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature-list__card {
+    width: calc((100% - 120px) / 4);
+  }
+}
+
 .feature-list__pic {
+  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .feature-list__title {

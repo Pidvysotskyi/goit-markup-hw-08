@@ -1,28 +1,68 @@
-.features-conteiner {
+.features {
   min-width: 320px;
 }
-.features {
-  // padding-top: 94px;
+.features-conteiner {
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 480px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding-top: 120px;
+    padding-bottom: 0px;
+  }
 }
 .feature-list {
   @extend %list;
-  // display: flex;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 .feature-list__card {
-  // flex-basis: calc((100%-90px) / 4);
-  &:not(:last-child) {
-    // margin-right: 30px;
+  display: block;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 120px) / 4);
   }
 }
 .feature-list__pic {
-  // width: auto;
-  // height: 120px;
+  height: 120px;
   background-color: $third-bg-color;
   border-radius: 4px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  width: 100%;
 }
 .feature-list__title {
   font-size: 14px;
@@ -34,5 +74,4 @@
 }
 .feature-list__description {
   line-height: 1.71;
-  // margin-bottom: 0;
 }
