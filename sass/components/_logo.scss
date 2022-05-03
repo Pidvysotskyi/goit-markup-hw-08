@@ -2,15 +2,25 @@
   text-decoration: none;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
-  margin-right: 93px;
+  display: flex;
+
   color: $active-text-color;
   &__end {
     color: $secondary-text-color;
   }
   &__end--white {
     color: $third-text-color;
+  }
+
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
   }
 }
 .footer__logo {

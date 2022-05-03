@@ -18,8 +18,15 @@
           <span>Web</span>
           <span class="logo__end">Studio</span>
         </a>
+        <button type="button" class="menu-button" data-menu-click>
+          <svg width="40" height="40" aria-label="mobile-menu">
+            <use class="menu-button__open" href="./images/icons.svg#menu"></use>
+            <use class="menu-button__close" href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+
         <!--Navifation panel-->
-        <nav class="navigation-panel">
+        <nav class="navigation-panel" data-menu>
           <!--Links-->
           <ul class="navigation-list">
             <li class="navigation-list__item">
@@ -35,6 +42,14 @@
           <!--Contacts-->
           <ul class="contact-list">
             <li class="contact-list__item">
+              <a href="tel:+380961111111" class="contact-list__link contact-list__link--accent">
+                <svg width="16" height="12" class="contact-list__icon">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="contact-list__item">
               <a href="mailto:info@devstudio.com" class="contact-list__link">
                 <svg width="16" height="12" class="contact-list__icon">
                   <use href="./images/icons.svg#envelope"></use>
@@ -42,14 +57,12 @@
                 info@devstudio.com
               </a>
             </li>
-            <li class="contact-list__item">
-              <a href="tel:+380961111111" class="contact-list__link">
-                <svg width="16" height="12" class="contact-list__icon">
-                  <use href="./images/icons.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
+          </ul>
+          <ul class="media-contact-list">
+            <li class="media-contact-list__item"><a href="" class="media-contact-list__link">Instagram</a></li>
+            <li class="media-contact-list__item"><a href="" class="media-contact-list__link">Twitter</a></li>
+            <li class="media-contact-list__item"><a href="" class="media-contact-list__link">Facebook</a></li>
+            <li class="media-contact-list__item"><a href="" class="media-contact-list__link">LinkedIn</a></li>
           </ul>
         </nav>
       </div>
@@ -431,5 +444,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
