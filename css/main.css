@@ -51,7 +51,7 @@ a {
 
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -103,9 +103,17 @@ img {
 .page-header {
   border-bottom: 1px solid #ececec;
   min-width: 320px;
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    height: 80px;
+  }
 }
 
 .header-conteiner {
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid red;
@@ -113,22 +121,17 @@ img {
   padding-right: 15px;
   width: 100%;
   max-width: 480px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
   .header-conteiner {
     max-width: 768px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -279,7 +282,7 @@ img {
 @media screen and (min-width: 768px) {
   .navigation-list__link--active::after {
     position: absolute;
-    bottom: -1px;
+    top: 45px;
     left: 50%;
     display: block;
     content: "";
@@ -287,8 +290,8 @@ img {
     height: 4px;
     background-color: #2196f3;
     border-radius: 2px;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -530,6 +533,22 @@ img {
   .contact-list {
     margin-top: 0;
     margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -543,6 +562,7 @@ img {
     display: inline-block;
     stroke-width: 0;
     stroke: currentColor;
+    margin-right: 10px;
   }
 }
 
@@ -552,7 +572,20 @@ img {
 
 @media screen and (min-width: 768px) {
   .contact-list__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-list__item:last-child {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-list__item:last-child {
+    margin-bottom: 0;
+    margin-right: 30px;
   }
 }
 
@@ -578,6 +611,12 @@ img {
 @media screen and (min-width: 768px) {
   .contact-list__link {
     font-size: 12px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -629,6 +668,12 @@ img {
   font-size: 14px;
   line-height: 1.71;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-contacts {
+    text-align: left;
+  }
 }
 
 .footer-contacts__item:not(:last-child) {
@@ -1307,6 +1352,37 @@ img {
   fill: #2196f3;
 }
 
+.filter-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -15px;
+  margin-left: -15px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
+}
+
+.filter-list__item {
+  margin-top: 15px;
+  margin-left: 8px;
+}
+
 .filter-list__button {
   cursor: pointer;
   color: #212121;
@@ -1317,6 +1393,7 @@ img {
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
+  padding: 6px 22px;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition-property: color, background-color, -webkit-box-shadow;
@@ -1336,7 +1413,53 @@ img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.project-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .project-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.project-list__item {
+  margin-top: 30px;
+  margin-left: 30px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .project-list__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-list__item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
 .project-card {
+  display: block;
+  text-decoration: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition-property: -webkit-box-shadow;
@@ -1360,6 +1483,23 @@ img {
 }
 
 .project-card__details {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 0;
   background-color: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   font-size: 18px;
@@ -1381,6 +1521,7 @@ img {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
 
 .project-card__name {
@@ -1389,6 +1530,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+  margin-bottom: 4px;
 }
 
 .project-card__type {
