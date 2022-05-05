@@ -5,12 +5,12 @@
 .member-list {
   @extend %list;
   display: block;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     margin-top: -30px;
     margin-left: -30px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
     flex-wrap: wrap;
   }
 }
@@ -21,17 +21,17 @@
   border-radius: 0px 0px 4px 4px;
 
   width: 100%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: calc((100% - 60px) / 2);
     margin-top: 30px;
     margin-left: 30px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     width: calc((100% - 120px) / 4);
   }
 }
@@ -42,7 +42,7 @@
 
   padding-bottom: 24px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     padding-bottom: 30px;
   }
 }

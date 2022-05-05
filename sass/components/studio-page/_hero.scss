@@ -5,19 +5,19 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  min-width: 320px;
+  min-width: $min-device-width;
 
   margin-left: auto;
   margin-right: auto;
 
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 480px;
+  max-width: $mobile;
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -30,13 +30,13 @@
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
-  max-width: 480px;
+  max-width: $mobile;
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
   }
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
   }
 }
 .hero-section__title {
@@ -51,7 +51,7 @@
   font-size: 26px;
   max-width: 360px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     max-width: 616px;
     font-size: 44px;
   }

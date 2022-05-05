@@ -1,5 +1,5 @@
 .features {
-  min-width: 320px;
+  min-width: $min-device-width;
 }
 .features-conteiner {
   margin-left: auto;
@@ -11,13 +11,13 @@
 
   padding-top: 60px;
   padding-bottom: 60px;
-  max-width: 480px;
+  max-width: $mobile;
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
   }
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
     padding-top: 94px;
     padding-bottom: 0px;
   }
@@ -26,29 +26,29 @@
   @extend %list;
   display: block;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     margin-top: -30px;
     margin-left: -30px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
     flex-wrap: wrap;
   }
 }
 .feature-list__card {
   display: block;
   width: 100%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: calc((100% - 60px) / 2);
     margin-top: 30px;
     margin-left: 30px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     width: calc((100% - 120px) / 4);
   }
 }
@@ -71,7 +71,7 @@
   color: $secondary-text-color;
   margin-bottom: 10px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
     text-align: center;
   }
 }

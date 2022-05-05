@@ -1,5 +1,5 @@
 .backload {
-  min-width: 320px;
+  min-width: $min-device-width;
   z-index: 15;
   position: fixed;
   top: 0;
@@ -29,7 +29,7 @@
 
   width: calc(100% - 30px);
   max-width: 450px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     max-width: 528px;
   }
 }
@@ -182,7 +182,7 @@
 
   font-size: 12px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     font-size: 14px;
   }
 }
