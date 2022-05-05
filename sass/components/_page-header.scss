@@ -1,9 +1,9 @@
 .page-header {
   border-bottom: 1px solid $secondary-border-color;
-  min-width: 320px;
+  min-width: $min-device-width;
 
   height: 60px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     height: 80px;
   }
 }
@@ -20,11 +20,11 @@
   display: flex;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
   }
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
   }
 }
 .menu-button {
@@ -35,7 +35,7 @@
   padding: 0;
   background-color: transparent;
   z-index: 10;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
@@ -62,7 +62,7 @@
   }
 }
 .navigation-panel {
-  min-width: 320px;
+  min-width: $min-device-width;
   width: 100%;
   background-color: $primary-bg-color;
 
@@ -83,7 +83,7 @@
   &.is-open {
     display: flex;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     position: static;
     flex-direction: row;
@@ -100,7 +100,7 @@
   height: auto;
 
   display: block;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
   }
 }
@@ -108,7 +108,7 @@
   &:not(:last-child) {
     margin-bottom: 50px;
     margin-right: 0;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin-bottom: 0;
       margin-right: 50px;
     }
@@ -128,7 +128,7 @@
   &--active {
     color: $active-text-color;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     &--active::after {
       position: absolute;
       top: 45px;
@@ -145,7 +145,7 @@
   display: block;
   font-size: 40px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     position: relative;
     display: inline-block;
     font-size: 14px;
